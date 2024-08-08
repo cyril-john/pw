@@ -13,7 +13,7 @@ await page.goto('https://angular-realworld.netlify.app')
 
     const loginResponse = await loginRequest.json()
 
-    const accessToken = loginResponse.user.token
+    const accessToken = await loginResponse.user.token
 
     console.log(accessToken)
 
