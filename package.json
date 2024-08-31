@@ -2,13 +2,16 @@
   "name": "pw",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "run playwrught in ui": "npx playwright test --ui"
+  },
   "keywords": [],
   "author": "cyril-john",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.46.0",
-    "@types/node": "^22.1.0"
+    "@types/node": "^22.1.0",
+    "dotenv": "^16.4.5"
   }
 }
