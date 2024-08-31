@@ -25,8 +25,6 @@ This repository contains a Playwright-based automation framework using TypeScrip
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Running Tests](#running-tests)
-- [Configuration](#configuration)
-- [Writing Tests](#writing-tests)
 - [Mock API Testing](#mock-api-testing)
 - [Continuous Integration](#continuous-integration)
 - [Contributing](#contributing)
@@ -121,5 +119,28 @@ To add these scripts to your package.json, include the following:
     "test:ci": "npx playwright test --ci"
   }
 }
+```
+
+## Mock API Testing
+
+```Typescript
+import { test, expect } from '@playwright/test';
+
+test('mock API example', async ({ page }) => {
+  await page.route('https://example.com/api/data', route => {
+    route.fulfill({
+      status: 200,
+      body: JSON.stringify({ key: 'value' }),
+    });
+  });
+
+  await page.goto('https://example.com');
+  // Additional test steps to verify the mock data
+});
+```
+
+## Continuous Integration
+```url
+https://playwright.dev/docs/ci
 ```
 
