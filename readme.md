@@ -140,7 +140,6 @@ test('mock API example', async ({ page }) => {
 ```
 
 ## Continuous Integration
-```url
-https://playwright.dev/docs/ci
-```
+
+[check playwright docs for ci](https://playwright.dev/docs/ci)
 
