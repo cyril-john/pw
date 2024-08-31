@@ -1,4 +1,7 @@
 import { test } from '@playwright/test'
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 test('login form', async ({ page }) => {
     await page.goto('http://localhost:4200/pages/iot-dashboard');
@@ -13,4 +16,14 @@ test('login form', async ({ page }) => {
 
    
     await page.getByPlaceholder('Jane Doe').fill('jan doe');
+})
+
+test('public urls ', async ({ page }) =>{
+    await page.goto('http://www.uitestingplayground.com/');
+    await page.getByRole('link', { name: 'Text Input' }).click();
+    await page.getByPlaceholder('MyButton').click();
+    await page.getByPlaceholder('MyButton').pressSequentially('type me', {delay: 100});
+    await page.getByRole('button', { name: 'Button That Should Change it\'' }).click();
+
+    
 })
