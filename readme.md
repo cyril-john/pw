@@ -57,26 +57,35 @@ Follow the instructions below to set up the project and start running your first
 ├── tsconfig.json        # TypeScript configuration
 └── README.md            # Project documentation
 
+```
 
-## Project Structure
+##  Running Tests 
 
 Run All Tests
 To run all tests, execute the following command:
 
+ ```bash
 npm test
+```
 
 
 Run a Specific Test
 To run a specific test file, use:
+ ```bash
 npm run test -- src/tests/your-test-file.spec.ts
+```
 
 Run Tests with a Specific Tag
 You can tag your tests using the @tag notation and run tests with a specific tag:
+ ```bash
 npm run test -- --grep @yourTag
+```
 
 Show Test Report
 After running your tests, you can generate and open the HTML report:
+ ```bash
 npm run show-report
+```
 
 NPM Scripts
 The following npm scripts are available for running and managing tests:
@@ -85,6 +94,7 @@ npm test: Runs all tests using Playwright.
 npm run show-report: Generates and opens the HTML report after tests are executed.
 npm run test:ci: Runs tests in headless mode for CI/CD environments.
 To add these scripts to your package.json, include the following:
+
 {
   "scripts": {
     "test": "npx playwright test",
