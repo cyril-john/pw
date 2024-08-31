@@ -36,7 +36,7 @@ Follow the instructions below to set up the project and start running your first
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [Node.js](https://nodejs.org/) (version 18 or higher) Check out [system requirements](https://playwright.dev/docs/intro#system-requirements) for details.
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
@@ -142,4 +142,7 @@ test('mock API example', async ({ page }) => {
 ## Continuous Integration
 
 [check playwright docs for ci](https://playwright.dev/docs/ci)
+
+## Contributing
+Author : Cyril Arickathil
 
