@@ -16,7 +16,10 @@ Headless execution is supported for all browsers on all platforms. Check out [sy
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efec209b26e5abd482262ecefaa0132288badc8f
 # Playwright Automation Framework with TypeScript
 
 This repository contains a Playwright-based automation framework using TypeScript. The framework is designed for end-to-end testing of web applications, providing a robust structure to write, run, and manage tests efficiently.
@@ -26,8 +29,6 @@ This repository contains a Playwright-based automation framework using TypeScrip
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Running Tests](#running-tests)
-- [Configuration](#configuration)
-- [Writing Tests](#writing-tests)
 - [Mock API Testing](#mock-api-testing)
 - [Continuous Integration](#continuous-integration)
 - [Contributing](#contributing)
@@ -39,7 +40,11 @@ Follow the instructions below to set up the project and start running your first
 
 ### Prerequisites
 
+<<<<<<< HEAD
 - [Node.js](https://nodejs.org/) (version 18 or higher)
+=======
+- [Node.js](https://nodejs.org/) (version 18 or higher) Check out [system requirements](https://playwright.dev/docs/intro#system-requirements) for details.
+>>>>>>> efec209b26e5abd482262ecefaa0132288badc8f
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
@@ -76,26 +81,35 @@ Follow the instructions below to set up the project and start running your first
 ├── tsconfig.json        # TypeScript configuration
 └── README.md            # Project documentation
 
+```
 
-## Project Structure
+##  Running Tests 
 
 Run All Tests
 To run all tests, execute the following command:
 
+ ```bash
 npm test
+```
 
 
 Run a Specific Test
 To run a specific test file, use:
+ ```bash
 npm run test -- src/tests/your-test-file.spec.ts
+```
 
 Run Tests with a Specific Tag
 You can tag your tests using the @tag notation and run tests with a specific tag:
+ ```bash
 npm run test -- --grep @yourTag
+```
 
 Show Test Report
 After running your tests, you can generate and open the HTML report:
+ ```bash
 npm run show-report
+```
 
 NPM Scripts
 The following npm scripts are available for running and managing tests:
@@ -104,6 +118,8 @@ npm test: Runs all tests using Playwright.
 npm run show-report: Generates and opens the HTML report after tests are executed.
 npm run test:ci: Runs tests in headless mode for CI/CD environments.
 To add these scripts to your package.json, include the following:
+
+```Typescript
 {
   "scripts": {
     "test": "npx playwright test",
@@ -111,4 +127,30 @@ To add these scripts to your package.json, include the following:
     "test:ci": "npx playwright test --ci"
   }
 }
+```
+
+## Mock API Testing
+
+```Typescript
+import { test, expect } from '@playwright/test';
+
+test('mock API example', async ({ page }) => {
+  await page.route('https://example.com/api/data', route => {
+    route.fulfill({
+      status: 200,
+      body: JSON.stringify({ key: 'value' }),
+    });
+  });
+
+  await page.goto('https://example.com');
+  // Additional test steps to verify the mock data
+});
+```
+
+## Continuous Integration
+
+[check playwright docs for ci](https://playwright.dev/docs/ci)
+
+## Contributing
+Author : Cyril Arickathil
 

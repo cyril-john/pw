@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
 import dotenv from 'dotenv';
-import HomePage from '../pages/home.page';
+import {HomePage} from '../pages/home.page';
 dotenv.config();
 
 
@@ -30,7 +30,10 @@ test('public urls ', async ({ page }) =>{
 })
 
 test('pom model', async ({ page }) => {
-    const homePage = new HomePage(page);
+   const homePage = new HomePage(page);
+   const total=  await homePage.checkTotal(10,20)
+   console.log(`total value is --> ${total}`)
    await homePage.goto();
    await homePage.createNewButton('create');
+
 })
