@@ -1,5 +1,6 @@
 import { test } from '@playwright/test'
 import dotenv from 'dotenv';
+import HomePage from '../pages/home.page';
 dotenv.config();
 
 
@@ -25,5 +26,11 @@ test('public urls ', async ({ page }) =>{
     await page.getByPlaceholder('MyButton').pressSequentially('type me', {delay: 100});
     await page.getByRole('button', { name: 'Button That Should Change it\'' }).click();
 
-    
+    //sergii.rudenko@transportexchangegroup.com
+})
+
+test('pom model', async ({ page }) => {
+    const homePage = new HomePage(page);
+   await homePage.goto();
+   await homePage.createNewButton('create');
 })

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "run playwrught in ui": "npx playwright test --ui"
+    "test": "npx playwright test",
+    "show-report": "npx playwright show-report",
+    "test:ci": "npx playwright test --ci",
+    "show-ui": "npx playwright test --ui"
   },
   "keywords": [],
   "author": "cyril-john",

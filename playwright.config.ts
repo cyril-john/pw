@@ -11,7 +11,7 @@ dotenv.config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: 'src/tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -28,9 +28,9 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    proxy:{
-      server: process.env.base_URL || ""
-    },
+    // proxy:{
+    //   server: process.env.base_URL || ""
+    // },
     trace: 'on-first-retry',
   },
 
