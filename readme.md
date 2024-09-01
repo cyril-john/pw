@@ -16,10 +16,6 @@ Headless execution is supported for all browsers on all platforms. Check out [sy
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> efec209b26e5abd482262ecefaa0132288badc8f
 # Playwright Automation Framework with TypeScript
 
 This repository contains a Playwright-based automation framework using TypeScript. The framework is designed for end-to-end testing of web applications, providing a robust structure to write, run, and manage tests efficiently.
@@ -40,11 +36,7 @@ Follow the instructions below to set up the project and start running your first
 
 ### Prerequisites
 
-<<<<<<< HEAD
-- [Node.js](https://nodejs.org/) (version 18 or higher)
-=======
 - [Node.js](https://nodejs.org/) (version 18 or higher) Check out [system requirements](https://playwright.dev/docs/intro#system-requirements) for details.
->>>>>>> efec209b26e5abd482262ecefaa0132288badc8f
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
